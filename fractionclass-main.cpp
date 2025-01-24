@@ -26,8 +26,9 @@ public:
 
 	//default constructor
 	Fraction(int top = 0, int bottom = 1) {
-		num = top;
-		den = bottom;
+		int common = gcd(top, bottom);
+		num = top / common;
+		den = bottom / common;
 	}
 
 	//overload the << operator: see definition below class
